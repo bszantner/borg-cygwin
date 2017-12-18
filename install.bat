@@ -22,7 +22,7 @@ cd %OURPATH%
 REM --- Install release version of CygWin in a subfolder
 
 set CYGPATH=%OURPATH%\Borg
-set INSTALLPKGS=python3,openssh,liblz4_1
+set INSTALLPKGS=python3,python3-setuptools,openssh,liblz4_1,cygwin-devel
 set REMOVEPKGS=csih,gawk,lynx,man-db,groff,vim-minimal,tzcode,ncurses,info,util-linux
 
 %CYGSETUP% -q -B -o -n -L -R %CYGPATH% -P %INSTALLPKGS% -x %REMOVEPKGS%
