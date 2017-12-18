@@ -19,4 +19,4 @@ borg create -C lz4 /cygdrive/D/Borg::Test /cygdrive/C/Photos/
 
 The install script first builds borg inside temporary CygWin subfolder, then installs much smaller release version into Borg subfolder. Built packages are copied over, unnecessary files removed.
 
-Tested with CygWin 2.4.1, borgbackup 1.0.0 on Windows 7 64-bit.
+Tested with CygWin 2.882, borgbackup 1.1.3 on Windows 10 64-bit.
