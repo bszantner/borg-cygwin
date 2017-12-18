@@ -15,7 +15,7 @@ set BUILDPKGS=python3,python3-devel,python3-setuptools,binutils,gcc-g++,libopens
 REM --- Build borgbackup
 
 cd %CYGBUILD%
-bin\bash --login -c 'easy_install-3.4 pip'
+bin\bash --login -c 'easy_install-3.6 pip'
 bin\bash --login -c 'pip install borgbackup'
 cd %OURPATH%
 
@@ -37,9 +37,9 @@ REM --- Copy built packages into release path
 cd %CYGBUILD%
 
 copy bin\borg %CYGPATH%\bin
-for /d %%d in (lib\python3.4\site-packages\borg*) do xcopy /s %%d %CYGPATH%\%%d\
-for /d %%d in (lib\python3.4\site-packages\msgpack*) do xcopy /s %%d %CYGPATH%\%%d\
-for /d %%d in (lib\python3.4\site-packages\pkg_resources) do xcopy /s %%d %CYGPATH%\%%d\
+for /d %%d in (lib\python3.6\site-packages\borg*) do xcopy /s %%d %CYGPATH%\%%d\
+for /d %%d in (lib\python3.6\site-packages\msgpack*) do xcopy /s %%d %CYGPATH%\%%d\
+for /d %%d in (lib\python3.6\site-packages\pkg_resources) do xcopy /s %%d %CYGPATH%\%%d\
 
 REM --- Remove all locales except EN (borg does not use them)
 
